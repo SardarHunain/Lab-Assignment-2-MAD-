@@ -4,7 +4,7 @@ import CityContext from "../Context/CityContext";
 import { TextInput, Button } from "react-native";
 
 const Screen4 = ({ navigation }) => {
-  const { City, setCity } = useContext(CityContext);
+  const { city, setCity } = useContext(CityContext);
   const [Name, setName] = useState("");
   const [Province, setProvince] = useState("");
   const updateValues = () => {
@@ -15,8 +15,8 @@ const Screen4 = ({ navigation }) => {
   };
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Name:{City.cityName}</Text>
-      <Text>Registration Number:{City.cityProvince}</Text>
+      <Text>Name:{city.cityName}</Text>
+      <Text>Registration Number:{city.cityProvince}</Text>
 
       <TextInput
         placeholder="enter new city name"
