@@ -9,14 +9,13 @@ const SearchScreen = () => {
 
   const handleSearch = async () => {
     try {
-      // Get student data from AsyncStorage
+      
       const studentsString = await AsyncStorage.getItem("students");
       
-      // Check if studentsString is not null or undefined
       if (studentsString) {
         const students = JSON.parse(studentsString);
 
-        // Search for the student using the provided term
+
         const result = students.find(
           (student) =>
             student.studentName.toLowerCase() === searchTerm.toLowerCase() ||
